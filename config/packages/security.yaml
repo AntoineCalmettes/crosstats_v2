@@ -36,9 +36,10 @@ security:
             # switch_user: true
 
     # Easy way to control access for large sections of your site
-    # Note: Only the *first* access control that matches will be used
+    # Note: Only the *first* access control that matches will be used IS_AUTHENTICATED_FULLY
     access_control:
         - { path: ^/api/login_check, roles: PUBLIC_ACCESS  }
+        - { path: ^/doc,       roles: PUBLIC_ACCESS }
         - { path: ^/api,       roles: IS_AUTHENTICATED_FULLY }
     
 
